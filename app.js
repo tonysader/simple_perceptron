@@ -41,7 +41,7 @@ request.onupgradeneeded = function(event) {
 'use strict';
 angular.module('myFirstApp', [])
 
-.controller('MyFirstController',['$scope', function ($scope)  {
+.controller('MyFirstController', function ($scope) {
 
   $scope.level = 1;
   $scope.network = {
@@ -249,6 +249,6 @@ angular.module('myFirstApp', [])
    $scope.$digest();
    $(".modal").fadeOut("slow");
  })
-}]);
+});
 
 })();
