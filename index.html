@@ -1,46 +1,49 @@
 <!DOCTYPE html>
 <html ng-app="myFirstApp">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <style>
-      .nxt_btn{
+      .nxt_btn {
         position: fixed;
-        top:0;
+        top: 0;
         padding-top: 10px;
-        left:0;
+        left: 0;
         max-width: 10%;
         height: 100%;
       }
-      .container{
+      .container {
         min-height: 900px;
       }
-      .btn-blue{
+      .btn-blue {
         color: white;
-        background: #070925!important;
+        background: #070925 !important;
 
-        border-color: none!important;
+        border-color: none !important;
       }
-      .btn-blue:hover{
-        background-color: #0430af!important;
-        color:white;
+      .btn-blue:hover {
+        background-color: #0430af !important;
+        color: white;
       }
       .bg-blue {
         color: white;
-        background: #070925!important;
+        background: #070925 !important;
       }
-      nav a.text-white{
-        color: #9397ff !important
+      nav a.text-white {
+        color: #9397ff !important;
       }
-      nav li.active a{
+      nav li.active a {
         color: white !important;
       }
-      .navbar-brand{
+      .navbar-brand {
         color: rgb(0 173 255 / 90%) !important;
       }
     </style>
@@ -48,104 +51,194 @@
     <title>Online Parceptron Learning</title>
   </head>
   <body>
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-blue fixed-top">
       <a class="navbar-brand" href="#">Antoin Sader</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link text-white" href="https://tonysader.github.io/simple_perceptron/" target="_blank">Simple Perceptron <span class="sr-only">(current)</span></a>
+            <a
+              class="nav-link text-white"
+              href="https://tonysader.github.io/simple_perceptron/"
+              target="_blank"
+              >Simple Perceptron <span class="sr-only">(current)</span></a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="https://tonysader.github.io/FFT_Calculator/" target="_blank">fast Fourier transform</a>
+            <a
+              class="nav-link text-white"
+              href="https://tonysader.github.io/FFT_Calculator/"
+              target="_blank"
+              >fast Fourier transform</a
+            >
           </li>
 
           <li class="nav-item">
-            <a class="nav-link text-white" href="https://tonysader.github.io/Modular_arithmetic/" target="_blank">Euclid and Modular linear solver</a>
+            <a
+              class="nav-link text-white"
+              href="https://tonysader.github.io/Modular_arithmetic/"
+              target="_blank"
+              >Euclid and Modular linear solver</a
+            >
           </li>
 
           <li class="nav-item">
-            <a class="nav-link text-white" href="http://graphtheory.rf.gd/" target="_blank">Graph theory</a>
+            <a
+              class="nav-link text-white"
+              href="http://graphtheory.rf.gd/"
+              target="_blank"
+              >Graph theory</a
+            >
           </li>
         </ul>
       </div>
     </nav>
-    <div class="jumbotron text-center text-default" style="background: #070925!important" >
-      <h1  class="text-white">Online Parceptron Learning Application </h1>
+    <div
+      class="jumbotron text-center text-default"
+      style="background: #070925 !important"
+    >
+      <h1 class="text-white">Online Parceptron Learning Application</h1>
       <p class="text-white">
-        If you want to train perceptron to classify inputs correctly,
-        which is building Single-layer Neural Network, You came to the  right place. <br>
-        Here you can select the inputs you want with the number you want.<br>
-        You can select as much as training set as you want, the same thing with the testing sets to test your neural network.<br>
-        The activation function here is step function which will output 0 or 1 based on the bias, inputs and the weights.<br>
-        The weights will start automatically as 0.<br>
-        You can choose the bias and the educational rate that will train the network.<br>
-        You can enter the maximum number of iterations you want.<br>
-        You can save the network to use it in another time. It will be saved on your browser<br>
-        This project is developed with pure javascript and AngularJs in 5hrs by <a href="https://www.linkedin.com/in/antoin-sader-3a1920158/"> Antoin Sader </a>
+        If you want to train perceptron to classify inputs correctly, which is
+        building Single-layer Neural Network, You came to the right place.
+        <br />
+        Here you can select the inputs you want with the number you want.<br />
+        You can select as much as training set as you want, the same thing with
+        the testing sets to test your neural network.<br />
+        The activation function here is step function which will output 0 or 1
+        based on the bias, inputs and the weights.<br />
+        The weights will start automatically as 0.<br />
+        You can choose the bias and the educational rate that will train the
+        network.<br />
+        You can enter the maximum number of iterations you want.<br />
+        You can save the network to use it in another time. It will be saved on
+        your browser<br />
+        This project is developed with pure javascript and AngularJs in 5hrs by
+        <a href="https://www.linkedin.com/in/antoin-sader-3a1920158/">
+          Antoin Sader
+        </a>
       </p>
     </div>
 
     <div class="container bg-default" ng-controller="MyFirstController">
-
       <div class="row">
         <div class="col-12 text-center">
-
-            <p class="text-default" ng-show="level==1"> Select number of inputs, then number of the trainings sample and click next </p>
-            <p class="text-default" ng-show="level==2">Select input names and training samples names, make it unique, if you want just leave it as it is</p>
-            <p class="text-default" ng-show="level==3">Choose educational rate and Bias.</p>
-            <p class="text-default" ng-show="level==4">Choose the values of the training set. </p>
-            <p class="text-default" ng-show="level==5 && !network.solved"> Click on the start training button </p>
-            <p class="text-default" ng-show="network.solved && !testingDiv">Yeah! Network is now trained and you can start testing </p>
-            <p class="text-default" ng-show="testingDiv">Put the values and click on test </p>
-            <p class="text-default" ng-show="testing.finish">Test finished. You can see the results. </p>
-
+          <p class="text-default" ng-show="level==1">
+            Select number of inputs, then number of the trainings sample and
+            click next
+          </p>
+          <p class="text-default" ng-show="level==2">
+            Select input names and training samples names, make it unique, if
+            you want just leave it as it is
+          </p>
+          <p class="text-default" ng-show="level==3">
+            Choose educational rate and Bias.
+          </p>
+          <p class="text-default" ng-show="level==4">
+            Choose the values of the training set.
+          </p>
+          <p class="text-default" ng-show="level==5 && !network.solved">
+            Click on the start training button
+          </p>
+          <p class="text-default" ng-show="network.solved && !testingDiv">
+            Yeah! Network is now trained and you can start testing
+          </p>
+          <p class="text-default" ng-show="testingDiv">
+            Put the values and click on test
+          </p>
+          <p class="text-default" ng-show="testing.finish">
+            Test finished. You can see the results.
+          </p>
         </div>
       </div>
       <div class="row">
         <div class="col-12">
-          <div class="row" >
-
-              <div class="col-12 col-md-3">
-                  <div class="form-group">
-                    <label>Network name</label>
-                    <input  type="text" ng-model="network.name" class="form-control">
-                  </div>
-              </div>
-              <div class="col-12 col-md-3">
-                  <div class="form-group">
-                    <label for="inputs_num">Number of inputs</label>
-                    <input ng-disabled="level != 1" name="inputs_num" type="number" ng-model="network.inputs_num" ng-change="change_input_nums()" class="form-control">
-                  </div>
-              </div>
-
-                <div class="col-12 col-md-3" ng-show="network.inputs_num > 0">
-                    <div class="form-group">
-                      <label for="trainings_num">Number of training samples</label>
-                      <input  ng-disabled="level != 1" name="trainings_num" type="number" ng-model="network.trainings_num" ng-change="change_trainings_num()" class="form-control">
-                    </div>
-                </div>
-
-            </div>
-          <div class="row" ng-hide="level == 1">
-            <div class="col-6 col-md-3" ng-repeat="input in network.inputs track by $index" >
+          <div class="row">
+            <div class="col-12 col-md-3">
               <div class="form-group">
-                <label for="input_name">Input {{network.inputs[$index].id}} name </label>
-                <input name="input_name" type="text" ng-disabled="level != 2" ng-model="network.inputs[$index].name"  class="form-control">
+                <label>Network name</label>
+                <input
+                  type="text"
+                  ng-model="network.name"
+                  class="form-control"
+                />
+              </div>
+            </div>
+            <div class="col-12 col-md-3">
+              <div class="form-group">
+                <label for="inputs_num">Number of inputs</label>
+                <input
+                  ng-disabled="level != 1"
+                  name="inputs_num"
+                  type="number"
+                  ng-model="network.inputs_num"
+                  ng-change="change_input_nums()"
+                  class="form-control"
+                />
               </div>
             </div>
 
+            <div class="col-12 col-md-3" ng-show="network.inputs_num > 0">
+              <div class="form-group">
+                <label for="trainings_num">Number of training samples</label>
+                <input
+                  ng-disabled="level != 1"
+                  name="trainings_num"
+                  type="number"
+                  ng-model="network.trainings_num"
+                  ng-change="change_trainings_num()"
+                  class="form-control"
+                />
+              </div>
+            </div>
           </div>
           <div class="row" ng-hide="level == 1">
-            <div class="col-6 col-md-3" ng-repeat="input in network.trainings track by $index" >
+            <div
+              class="col-6 col-md-3"
+              ng-repeat="input in network.inputs track by $index"
+            >
               <div class="form-group">
-                <label for="input_name">Training sample {{network.inputs[$index].id}} name </label>
+                <label for="input_name"
+                  >Input {{network.inputs[$index].id}} name
+                </label>
+                <input
+                  name="input_name"
+                  type="text"
+                  ng-disabled="level != 2"
+                  ng-model="network.inputs[$index].name"
+                  class="form-control"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row" ng-hide="level == 1">
+            <div
+              class="col-6 col-md-3"
+              ng-repeat="input in network.trainings track by $index"
+            >
+              <div class="form-group">
+                <label for="input_name"
+                  >Training sample {{network.inputs[$index].id}} name
+                </label>
 
-                <input name="input_name" type="text" ng-disabled="level != 2" ng-model="network.trainings[$index].name"  class="form-control">
+                <input
+                  name="input_name"
+                  type="text"
+                  ng-disabled="level != 2"
+                  ng-model="network.trainings[$index].name"
+                  class="form-control"
+                />
               </div>
             </div>
           </div>
@@ -153,96 +246,184 @@
             <div class="row">
               <div class="col-12 col-md-3">
                 <div class="form-group">
-                  <label > Educational rate: </label>
-                  <input ng-disabled="level != 3" type="number" min="0" max="1" class="form-control" ng-model="network.c">
+                  <label> Educational rate: </label>
+                  <input
+                    ng-disabled="level != 3"
+                    type="number"
+                    min="0"
+                    max="1"
+                    class="form-control"
+                    ng-model="network.c"
+                  />
                 </div>
               </div>
               <div class="col-12 col-md-3">
                 <div class="form-group">
-                  <label > Bias: </label>
-                  <input ng-disabled="level != 3" type="number" class="form-control" ng-model="network.bias">
+                  <label> Bias: </label>
+                  <input
+                    ng-disabled="level != 3"
+                    type="number"
+                    class="form-control"
+                    ng-model="network.bias"
+                  />
                 </div>
               </div>
             </div>
           </div>
           <div class="level_4" ng-hide="level < 4">
-            <table class="table table-dark" >
+            <table class="table table-dark">
               <thead>
                 <tr>
-                  <th> Name </th>
-                  <th ng-repeat="input in network.inputs"> <label> {{input.name}} </label></th>
-                  <th> Desired output </th>
+                  <th>Name</th>
+                  <th ng-repeat="input in network.inputs">
+                    <label> {{input.name}} </label>
+                  </th>
+                  <th>Desired output</th>
                 </tr>
               </thead>
               <tbody>
                 <tr ng-repeat="training in network.trainings track by $index">
-                  <td > <label> {{network.trainings[$index].name}} </label></td>
-                  <td ng-repeat="value in network.trainings[$index].values track by $index">
-                     <input type="number" class="form-control" ng-model="training.values[$index]"/>
-                   </td>
-                   <td>
-                     <input type="number" min="0" max="1" class="form-control" ng-model="training.desired"/>
-                   </td>
+                  <td><label> {{network.trainings[$index].name}} </label></td>
+                  <td
+                    ng-repeat="value in network.trainings[$index].values track by $index"
+                  >
+                    <input
+                      type="number"
+                      class="form-control"
+                      ng-model="training.values[$index]"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="number"
+                      min="0"
+                      max="1"
+                      class="form-control"
+                      ng-model="training.desired"
+                    />
+                  </td>
                 </tr>
               </tbody>
             </table>
           </div>
           <div class="level_5 mb-5" ng-hide="level < 5">
-            <button type="button" class="btn btn-blue"  ng-click="start_train()" name="button"> Start training</button>
+            <button
+              type="button"
+              class="btn btn-blue"
+              ng-click="start_train()"
+              name="button"
+            >
+              Start training
+            </button>
           </div>
           <div class="" ng-show="network.solved">
             <div class="row">
               <div class="col-6">
-                The network is now learned with {{network.iterations}} iterations.
+                The network is now learned with {{network.iterations}}
+                iterations.
               </div>
             </div>
             <div class="row mb-5">
               <div class="col-12">
                 <center>
-                  <button type="button" class="btn btn-blue" ng-click="show_results()" name="button"> Show training process</button>
-                  <button type="button" class="btn btn-blue" ng-click="start_test()" name="button"> Testing</button>
-                  <button type="button" class="btn btn-blue" ng-click="save_network()" name="button"> Save network on my browser</button>
+                  <button
+                    type="button"
+                    class="btn btn-blue"
+                    ng-click="show_results()"
+                    name="button"
+                  >
+                    Show training process
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-blue"
+                    ng-click="start_test()"
+                    name="button"
+                  >
+                    Testing
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-blue"
+                    ng-click="save_network()"
+                    name="button"
+                  >
+                    Save network on my browser
+                  </button>
                 </center>
               </div>
             </div>
             <div class="mb-5" ng-show="testingDiv">
-              <div class="row" >
-                <div class="col-6 col-md-3" ng-repeat="testVal in testing.values track by $index" >
+              <div class="row">
+                <div
+                  class="col-6 col-md-3"
+                  ng-repeat="testVal in testing.values track by $index"
+                >
                   <div class="form-group">
-                    <label for="input_name">Value of {{network.inputs[$index].name}} </label>
-                    <input  type="number"
-                    ng-disabled="!testingDiv" ng-model="testing.values[$index]"  class="form-control">
+                    <label for="input_name"
+                      >Value of {{network.inputs[$index].name}}
+                    </label>
+                    <input
+                      type="number"
+                      ng-disabled="!testingDiv"
+                      ng-model="testing.values[$index]"
+                      class="form-control"
+                    />
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-6">
-                  <button type="button" class="btn btn-blue" ng-click="startTesting()" name="button"> Test </button>
+                  <button
+                    type="button"
+                    class="btn btn-blue"
+                    ng-click="startTesting()"
+                    name="button"
+                  >
+                    Test
+                  </button>
                 </div>
               </div>
               <div class="row" ng-show="testing.finish">
                 <div class="col-6">
-                  <p > The result of the test is: {{testing.output}}</p>
+                  <p>The result of the test is: {{testing.output}}</p>
                 </div>
               </div>
             </div>
-            <div class="mb-5">
-
-            </div>
+            <div class="mb-5"></div>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="btn-group col-12">
           <center>
-          <button type="button" ng-hide="network.solved"
-            ng-disabled="((level == 1) && (network.inputs_num == 0 || network.trainings_num == 0)) || ((level == 3) && (network.c ==0))"
-           name="button" ng-click="nextLevel()" class="btn btn-blue">  Next</button>
-           <button type="button"
-            name="button" ng-click="loadOtherNetworks()" data-toggle="modal" data-target="#exampleModal" class="btn btn-blue">  Load network</button>
-            <button type="button"
-              class="btn btn-danger clear_database">  Clear network history</button>
+            <button
+              type="button"
+              ng-hide="network.solved"
+              ng-disabled="((level == 1) && (network.inputs_num == 0 || network.trainings_num == 0)) || ((level == 3) && (network.c ==0))"
+              name="button"
+              ng-click="nextLevel()"
+              class="btn btn-blue"
+            >
+              Next
+            </button>
+            <button type="button" class="btn btn-success" ng-click="runOr()">
+              Run OR example
+            </button>
 
+            <button
+              type="button"
+              name="button"
+              ng-click="loadOtherNetworks()"
+              data-toggle="modal"
+              data-target="#exampleModal"
+              class="btn btn-blue"
+            >
+              Load network
+            </button>
+            <button type="button" class="btn btn-danger clear_database">
+              Clear network history
+            </button>
           </center>
         </div>
 
@@ -251,37 +432,52 @@
             <div class="modal-content">
               <div class="modal-header bg-primary">
                 <h5 class="modal-title text-white">Load old network</h5>
-                <button type="button" class="close close_modal "  data-dismiss="modal" aria-label="Close">
+                <button
+                  type="button"
+                  class="close close_modal"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
                   <span aria-hidden="true" class="text-white">&times;</span>
                 </button>
               </div>
               <div class="modal-body">
-                <ul id="all_old_networks" class="text-default" >
-
-                </ul>
+                <ul id="all_old_networks" class="text-default"></ul>
               </div>
             </div>
           </div>
         </div>
 
-                <div class="modal" id="details" tabindex="-1" role="dialog">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header bg-primary">
-                        <h5 class="modal-title text-white">Details of training</h5>
-                        <button type="button" class="close close_modal "  data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true" class="text-white">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body bg-blue" style="overflow-y: scroll; height: 30rem" >
-                        <div class="commands" >
-                          <p class="text-white" ng-repeat="co in network.commands track by $index">{{co}} </p>
-
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+        <div class="modal" id="details" tabindex="-1" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header bg-primary">
+                <h5 class="modal-title text-white">Details of training</h5>
+                <button
+                  type="button"
+                  class="close close_modal"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true" class="text-white">&times;</span>
+                </button>
+              </div>
+              <div
+                class="modal-body bg-blue"
+                style="overflow-y: scroll; height: 30rem"
+              >
+                <div class="commands">
+                  <p
+                    class="text-white"
+                    ng-repeat="co in network.commands track by $index"
+                  >
+                    {{co}}
+                  </p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
